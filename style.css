@@ -38,7 +38,7 @@ a:active {
 }
 
 .container h3 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
   //   color: #58e3de;
   color: #3e3e52;
@@ -72,15 +72,34 @@ a:active {
   caret-color: #58e3de;
 }
 .articles {
+  margin: 0 auto;
   position: relative;
   margin-bottom: 1rem;
-  background-color: #323243;
+  background-color: hsl(240, 15%, 25%);
   padding: 25px 20px;
   font-size: 18px;
   text-align: left;
   border-radius: 10px;
   color: #bbb;
   cursor: pointer;
+  max-width: 80%;
+  transition: 0.3s ease-in-out;
+}
+
+.articles:before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background: #58e3de;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.articles:hover {
+  transform: scale(1.05);
 }
 
 .bx {
@@ -134,17 +153,21 @@ a {
   flex-direction: column;
 }
 
-.articles span::before {
-  content: "";
-  height: 94%;
-  border: 4px solid #58e3de;
-  position: absolute;
-  top: 0;
-  left: 0.5%;
-  bottom: 0;
-  border-radius: 50px;
-}
+// .articles span::before {
+//   content: "";
+
+//   border: 4px solid #58e3de;
+//   position: absolute;
+//   top: 0;
+//   left: 0.5%;
+//   bottom: 0;
+//   border-radius: 50px;
+//   z-index: -1;
+// }
 
 h4 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1px;
   margin-bottom: 1rem;
 }
