@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -11,11 +12,21 @@ body {
   background-color: #23232e;
   letter-spacing: 2px;
   min-height: 101vh;
+  text-decoration: none;
 }
 
-a:hover,
-a:active {
+a > * {
+  text-align: left;
   text-decoration: none;
+  color: #bbb;
+}
+
+a h4 {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1px;
+  margin-bottom: 1rem;
+  color: hsl(178, 50%, 50%);
 }
 
 .wiki {
@@ -33,7 +44,7 @@ a:active {
 }
 
 .container img {
-  width: 300px;
+  width: 250px;
   margin-bottom: 1rem;
 }
 
@@ -72,6 +83,7 @@ a:active {
   line-height: 25px;
   caret-color: #58e3de;
 }
+
 .articles {
   margin: 0 auto;
   position: relative;
@@ -192,12 +204,4 @@ a {
 .loading {
   margin: 0 auto;
   margin-top: 4rem;
-}
-
-h4 {
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 1px;
-  margin-bottom: 1rem;
-  color: hsl(178, 50%, 50%);
 }

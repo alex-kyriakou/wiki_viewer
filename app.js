@@ -12,6 +12,7 @@ const url =
 const form = document.querySelector(".form");
 const formInput = document.querySelector(".form-input");
 const results = document.querySelector(".results");
+const searchBtn = document.getElementById("search-btn");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -54,18 +55,20 @@ const renderResults = (list) => {
     .map((item) => {
       const { pageid, title, snippet } = item;
 
-      return `    
-    <div class="articles">
+      return `      
+      <div class="articles"> 
+      <a href="http://en.wikipedia.org/?curid=${pageid} target='_blank'">      
       <span></span>
-          <a href="http://en.wikipedia.org/?curid=${pageid} target="_blank"></a>
-          <h4>${title}</h4>
+      <h4>${title}</h4>
           <p>
             ${snippet}
           </p>
-    </div>
+          </a>
+        </div>     
+      
     `;
     })
     .join("");
 
-  results.innerHTML = ` ${cardsList} `;
+  results.innerHTML = `${cardsList} `;
 };
