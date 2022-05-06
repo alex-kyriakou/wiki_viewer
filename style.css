@@ -60,6 +60,7 @@ a h4 {
 .form {
   display: flex;
   margin: 0 auto;
+
   border: 2px solid #58e3de;
   padding: 15px 30px;
   border-radius: 35px;
@@ -204,4 +205,38 @@ a {
 .loading {
   margin: 0 auto;
   margin-top: 4rem;
+}
+
+@media screen and (max-width: 420px) {
+  .form-input,
+  .bx {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .container img {
+    width: 150px;
+  }
+
+  .tools {
+    margin-left: 5px;
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .form {
+    padding: 9px 15px;
+  }
+
+  .form-input {
+    font-size: 15px;
+    padding: 3px 10px;
+  }
 }
